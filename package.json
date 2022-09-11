@@ -41,7 +41,7 @@
   "homepage": "https://github.com/Half-Shot/matrix-appservice-discord#readme",
   "dependencies": {
     "@mx-puppet/matrix-discord-parser": "0.1.10",
-    "better-discord.js": "git+https://github.com/Kalissaac/better-discord.js.git#4cf1c4c6cabc036872cf3c6d8391248ce0dedd13",
+    "better-discord.js": "git+https://github.com/Kalissaac/better-discord.js.git#5d43e7018c1f69fb8a3e1d3277020a5a55e187e8",
     "better-sqlite3": "^7.1.0",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^6.1.0",

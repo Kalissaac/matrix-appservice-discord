@@ -102,7 +102,7 @@ export class DiscordClientFactory {
             fetchAllMembers: false,
             messageCacheLifetime: 5,
             ws: {
-                intents: Intents.NON_PRIVILEGED,
+                intents: Intents.NON_PRIVILEGED | Intents.FLAGS.MESSAGE_CONTENT,
             },
         });
 
