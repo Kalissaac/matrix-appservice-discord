@@ -304,6 +304,7 @@ export class MatrixEventProcessor {
         if (event.type !== "m.sticker") {
             const content = event.content!["m.new_content"] ? event.content!["m.new_content"] : event.content;
             body = await this.matrixMsgProcessor.FormatMessage(content as IMatrixMessage, channel.guild, params);
+            body = body.replace(/\&apos\;/g, "'") // fix apostrophe escaping
         }
 
         const messageEmbed = new Discord.MessageEmbed();
