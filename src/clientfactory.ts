@@ -43,7 +43,7 @@ export class DiscordClientFactory {
             fetchAllMembers: this.config.usePrivilegedIntents,
             messageCacheLifetime: 5,
             ws: {
-                intents: 36408,
+                intents: this.config.usePrivilegedIntents ? Intents.ALL : (Intents.NON_PRIVILEGED | Intents.resolve('MESSAGE_CONTENT')),
             },
         });
 
@@ -69,7 +69,7 @@ export class DiscordClientFactory {
             fetchAllMembers: false,
             messageCacheLifetime: 5,
             ws: {
-                intents: 36408,
+                intents: Intents.NON_PRIVILEGED,
             },
         });
 
@@ -102,7 +102,7 @@ export class DiscordClientFactory {
             fetchAllMembers: false,
             messageCacheLifetime: 5,
             ws: {
-                intents: 36408,
+                intents: Intents.NON_PRIVILEGED | Intents.resolve('MESSAGE_CONTENT'),
             },
         });
 
